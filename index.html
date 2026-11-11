@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Jaqueline Gimenes | Moda feminina autoral em Valinhos-SP</title>
+<meta name="description" content="Moda feminina autoral criada com moldes e modificações próprios, em produção artesanal. Conheça o lançamento e fale com a criadora pelo Instagram.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Jost:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --creme:#FAF6EE; --bege:#EFE4D2; --texto:#3A2E24; --suave:#6B5A48;
+  --ouro:#C9A55B; --ouro-escuro:#8C6A1E; --raio:14px;
+  --serif:"Cormorant Garamond",Georgia,"Times New Roman",serif;
+  --sans:"Jost",system-ui,-apple-system,"Segoe UI",Arial,sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+body{margin:0;background:var(--creme);color:var(--texto);font-family:var(--sans);font-size:18px;line-height:1.65}
+img{max-width:100%;display:block}
+a{color:inherit}
+.skip{position:absolute;left:-999px;top:8px;background:var(--texto);color:var(--creme);padding:10px 16px;border-radius:8px;z-index:100}
+.skip:focus{left:8px}
+:focus-visible{outline:3px solid var(--ouro-escuro);outline-offset:3px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 22px}
+section{padding:72px 0}
+.alt{background:var(--bege)}
+.eyebrow{font-size:15px;letter-spacing:.14em;text-transform:uppercase;font-weight:600;color:var(--ouro-escuro);margin:0 0 10px}
+.alt .eyebrow{color:var(--suave)}
+h1,h2,h3{font-family:var(--serif);font-weight:600;line-height:1.12;margin:0 0 16px}
+h1{font-size:clamp(44px,8vw,84px);font-weight:700}
+h2{font-size:clamp(32px,5vw,48px)}
+h3{font-size:26px}
+p{margin:0 0 16px}
+.lead{font-size:clamp(19px,2.6vw,23px);color:var(--suave);max-width:36em}
+.rule{width:64px;height:3px;background:var(--ouro);border:0;margin:0 0 22px}
+/* menu */
+header{position:sticky;top:0;z-index:50;background:rgba(250,246,238,.96);border-bottom:1px solid #e3d6bf;backdrop-filter:blur(6px)}
+nav{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:64px}
+.marca{font-family:var(--serif);font-size:24px;font-weight:700;text-decoration:none;letter-spacing:.02em}
+nav ul{display:flex;gap:18px;list-style:none;margin:0;padding:0;overflow-x:auto;scrollbar-width:none}
+nav ul::-webkit-scrollbar{display:none}
+nav li a{display:block;padding:10px 4px;text-decoration:none;font-size:16px;font-weight:500;white-space:nowrap}
+nav li a:hover{color:var(--ouro-escuro);text-decoration:underline}
+@media (max-width:760px){nav{flex-direction:column;align-items:flex-start;padding:8px 0 4px;gap:0}nav ul{width:100%}}
+/* botões */
+.btn{display:inline-block;background:var(--texto);color:var(--creme);padding:15px 28px;border-radius:999px;text-decoration:none;font-weight:600;font-size:17px;border:2px solid var(--texto);min-height:48px}
+.btn:hover{background:var(--ouro-escuro);border-color:var(--ouro-escuro)}
+.btn.sec{background:transparent;color:var(--texto)}
+.btn.sec:hover{background:var(--texto);color:var(--creme);border-color:var(--texto)}
+.acoes{display:flex;flex-wrap:wrap;gap:14px;margin-top:26px}
+/* hero */
+.hero{padding:84px 0 72px;background:linear-gradient(180deg,var(--creme) 0%,var(--bege) 100%)}
+.hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:44px;align-items:center}
+@media (max-width:820px){.hero-grid{grid-template-columns:1fr}}
+.foto{border-radius:var(--raio);overflow:hidden;background:var(--bege);border:1px solid #e3d6bf}
+.foto img{width:100%;height:100%;object-fit:cover}
+.foto.alto{aspect-ratio:4/5}
+.foto.pec{aspect-ratio:3/4}
+/* cartões */
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+@media (max-width:900px){.grid4{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:700px){.grid3{grid-template-columns:1fr}}
+@media (max-width:460px){.grid4{grid-template-columns:1fr}}
+.card{background:var(--creme);border:1px solid #e3d6bf;border-radius:var(--raio);padding:26px}
+.alt .card{background:var(--creme)}
+.card h3{margin-bottom:8px}
+.card p{margin:0;color:var(--suave)}
+.peca h3{font-size:24px;margin:14px 0 6px}
+.peca p{margin:0 0 6px;color:var(--suave);font-size:17px}
+.tag{display:inline-block;font-size:14px;font-weight:600;letter-spacing:.04em;background:var(--bege);border:1px solid #d9c8a8;border-radius:999px;padding:3px 12px;margin-right:6px}
+/* passos */
+ol.passos{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,1fr);gap:22px;counter-reset:p}
+@media (max-width:900px){ol.passos{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:520px){ol.passos{grid-template-columns:1fr}}
+ol.passos li{counter-increment:p;background:var(--creme);border:1px solid #e3d6bf;border-radius:var(--raio);padding:24px}
+ol.passos li::before{content:counter(p);display:flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:50%;background:var(--texto);color:var(--creme);font-weight:600;margin-bottom:12px}
+/* tabela */
+table{border-collapse:collapse;width:100%;max-width:520px;background:var(--creme);border-radius:var(--raio);overflow:hidden}
+caption{text-align:left;padding:0 0 10px;color:var(--suave);font-size:16px}
+th,td{padding:14px 18px;text-align:left;border-bottom:1px solid #e3d6bf}
+th{background:var(--texto);color:var(--creme);font-weight:600}
+/* faq */
+details{background:var(--creme);border:1px solid #e3d6bf;border-radius:var(--raio);padding:4px 22px;margin-bottom:12px}
+summary{cursor:pointer;font-weight:600;padding:16px 0;list-style:none;display:flex;justify-content:space-between;gap:14px;align-items:center;min-height:48px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font-size:26px;line-height:1;color:var(--ouro-escuro)}
+details[open] summary::after{content:"\2212"}
+details p{color:var(--suave);padding-bottom:12px;margin:0}
+/* segurança */
+.seg{background:var(--texto);color:var(--creme)}
+.seg .eyebrow{color:var(--ouro)}
+.seg .rule{background:var(--ouro)}
+.seg .card{background:#4a3c30;border-color:#6b5a48}
+.seg .card p{color:#f1e8d8}
+.seg .lead{color:#f1e8d8}
+.seg a{color:var(--ouro)}
+/* rodapé */
+footer{background:var(--bege);padding:44px 0;font-size:16px}
+footer p{color:var(--suave);max-width:46em}
+.nota{font-size:15px}
+</style>
+</head>
+<body>
+<a class="skip" href="#conteudo">Ir para o conteúdo</a>
+
+<header>
+  <div class="wrap">
+    <nav aria-label="Menu principal">
+      <a class="marca" href="#inicio">Jaqueline Gimenes</a>
+      <ul>
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#lancamento">Lançamento</a></li>
+        <li><a href="#como-adquirir">Como adquirir</a></li>
+        <li><a href="#tamanhos">Tamanhos</a></li>
+        <li><a href="#perguntas">Perguntas</a></li>
+        <li><a href="#seguranca">Segurança</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="conteudo">
+
+<!-- 1. INÍCIO -->
+<section class="hero" id="inicio">
+  <div class="wrap hero-grid">
+    <div>
+      <p class="eyebrow">Moda feminina autoral · Valinhos-SP</p>
+      <h1>Elegância atemporal, com identidade.</h1>
+      <hr class="rule">
+      <p class="lead">Peças criadas com moldes e modificações próprios, em produção de caráter artesanal. Conheça o lançamento e fale direto com a criadora.</p>
+      <div class="acoes">
+        <a class="btn" href="#lancamento">Ver o lançamento</a>
+        <a class="btn sec" href="https://www.instagram.com/ajaquelinegimenes" target="_blank" rel="noopener noreferrer">Seguir no Instagram</a>
+      </div>
+    </div>
+    <!-- TROCAR: coloque a foto principal em img/principal.jpg e descreva a imagem no atributo alt -->
+    <figure class="foto alto" style="margin:0">
+      <img src="img/principal.jpg" alt="Foto principal da marca Jaqueline Gimenes" width="640" height="800" onerror="this.style.display='none'">
+    </figure>
+  </div>
+</section>
+
+<!-- 2. SOBRE -->
+<section id="sobre">
+  <div class="wrap">
+    <p class="eyebrow">Sobre a marca</p>
+    <h2>Feita com cuidado, do molde ao acabamento.</h2>
+    <hr class="rule">
+    <p class="lead">Cada peça nasce de moldes e modificações próprios, com produção de caráter artesanal, para vestir a mulher que valoriza estilo sem abrir mão da identidade.</p>
+    <div class="grid3" style="margin-top:34px">
+      <div class="card"><h3>Elegância Atemporal</h3><p>Cortes que atravessam as estações e continuam atuais.</p></div>
+      <div class="card"><h3>Exclusividade acessível</h3><p>Peças pensadas e lançadas em pequena escala, com identidade própria.</p></div>
+      <div class="card"><h3>Feminilidade com identidade</h3><p>Roupas que valorizam quem as veste e respeitam o seu jeito de ser.</p></div>
+    </div>
+    <div class="acoes"><a class="btn sec" href="#lancamento">Conhecer as peças</a></div>
+  </div>
+</section>
+
+<!-- 3. LANÇAMENTO -->
+<section class="alt" id="lancamento">
+  <div class="wrap">
+    <p class="eyebrow">Lançamento atual</p>
+    <h2>As peças da coleção.</h2>
+    <hr class="rule">
+    <p class="lead">Peças prontas, nos tamanhos P, M, G e GG, em quantidade limitada.</p>
+    <div class="grid4" style="margin-top:34px">
+      <!-- TROCAR as fotos: img/pantalona.jpg, img/camisa.jpg, img/jorts.jpg, img/musclete.jpg -->
+      <article class="peca">
+        <figure class="foto pec" style="margin:0"><img src="img/pantalona.jpg" alt="Calça Pantalona Naturali" width="480" height="640" loading="lazy" onerror="this.style.display='none'"></figure>
+        <h3>Calça Pantalona Naturali</h3>
+        <p>Corte exclusivo e caimento perfeito.</p>
+        <p><span class="tag">P</span><span class="tag">M</span><span class="tag">G</span><span class="tag">GG</span></p>
+        <p><strong>Quantidade limitada</strong></p>
+      </article>
+      <article class="peca">
+        <figure class="foto pec" style="margin:0"><img src="img/camisa.jpg" alt="Camisa Social" width="480" height="640" loading="lazy" onerror="this.style.display='none'"></figure>
+        <h3>Camisa Social</h3>
+        <p>Detalhes pelo Direct do Instagram.</p>
+        <p><span class="tag">P</span><span class="tag">M</span><span class="tag">G</span><span class="tag">GG</span></p>
+        <p><strong>Quantidade limitada</strong></p>
+      </article>
+      <article class="peca">
+        <figure class="foto pec" style="margin:0"><img src="img/jorts.jpg" alt="Bermuda Jorts" width="480" height="640" loading="lazy" onerror="this.style.display='none'"></figure>
+        <h3>Bermuda Jorts</h3>
+        <p>Detalhes pelo Direct do Instagram.</p>
+        <p><span class="tag">P</span><span class="tag">M</span><span class="tag">G</span><span class="tag">GG</span></p>
+        <p><strong>Quantidade limitada</strong></p>
+      </article>
+      <article class="peca">
+        <figure class="foto pec" style="margin:0"><img src="img/musclete.jpg" alt="Blusa MuscleTee" width="480" height="640" loading="lazy" onerror="this.style.display='none'"></figure>
+        <h3>Blusa MuscleTee</h3>
+        <p>Detalhes pelo Direct do Instagram.</p>
+        <p><span class="tag">P</span><span class="tag">M</span><span class="tag">G</span><span class="tag">GG</span></p>
+        <p><strong>Quantidade limitada</strong></p>
+      </article>
+    </div>
+    <div class="acoes"><a class="btn" href="https://www.instagram.com/ajaquelinegimenes" target="_blank" rel="noopener noreferrer">Perguntar sobre uma peça</a></div>
+  </div>
+</section>
+
+<!-- 4. COMO ADQUIRIR -->
+<section id="como-adquirir">
+  <div class="wrap">
+    <p class="eyebrow">Como adquirir</p>
+    <h2>Em quatro passos, direto com a criadora.</h2>
+    <hr class="rule">
+    <ol class="passos" style="margin-top:30px">
+      <li><h3>Conheça o lançamento</h3><p>Veja as peças desta página e as publicações no Instagram.</p></li>
+      <li><h3>Fale pelo Direct</h3><p>Envie uma mensagem direta para o perfil oficial da marca.</p></li>
+      <li><h3>Confirme tamanho e disponibilidade</h3><p>Cada lançamento tem quantidade limitada por tamanho.</p></li>
+      <li><h3>Combine a retirada</h3><p>Valores, pagamento e retirada no ateliê são combinados diretamente com a criadora.</p></li>
+    </ol>
+    <div class="acoes"><a class="btn" href="https://www.instagram.com/ajaquelinegimenes" target="_blank" rel="noopener noreferrer">Falar pelo Direct</a></div>
+  </div>
+</section>
+
+<!-- 5. TAMANHOS -->
+<section class="alt" id="tamanhos">
+  <div class="wrap">
+    <p class="eyebrow">Tamanhos</p>
+    <h2>P, M, G e GG.</h2>
+    <hr class="rule">
+    <table>
+      <caption>Tamanhos disponíveis nesta coleção</caption>
+      <thead><tr><th scope="col">Tamanho</th><th scope="col">Medidas</th></tr></thead>
+      <tbody>
+        <tr><th scope="row">P</th><td>Consulte pelo Direct</td></tr>
+        <tr><th scope="row">M</th><td>Consulte pelo Direct</td></tr>
+        <tr><th scope="row">G</th><td>Consulte pelo Direct</td></tr>
+        <tr><th scope="row">GG</th><td>Consulte pelo Direct</td></tr>
+      </tbody>
+    </table>
+    <p style="margin-top:18px">Dica: use uma fita métrica e meça busto, cintura e quadril sobre roupas leves. Na dúvida, mande suas medidas pelo Direct e a criadora indica o tamanho ideal.</p>
+    <div class="acoes"><a class="btn sec" href="https://www.instagram.com/ajaquelinegimenes" target="_blank" rel="noopener noreferrer">Falar sobre tamanhos</a></div>
+  </div>
+</section>
+
+<!-- 6. ATELIÊ -->
+<section id="atelie">
+  <div class="wrap">
+    <p class="eyebrow">Ateliê</p>
+    <h2>Valinhos, São Paulo.</h2>
+    <hr class="rule">
+    <p class="lead">As peças são criadas e retiradas no ateliê, em Valinhos (SP). Os detalhes são combinados pelo Direct.</p>
+    <div class="acoes"><a class="btn sec" href="https://www.instagram.com/ajaquelinegimenes" target="_blank" rel="noopener noreferrer">Falar pelo Direct</a></div>
+  </div>
+</section>
+
+<!-- 7. PERGUNTAS -->
+<section class="alt" id="perguntas">
+  <div class="wrap">
+    <p class="eyebrow">Perguntas frequentes</p>
+    <h2>Tire suas dúvidas.</h2>
+    <hr class="rule">
+    <div style="max-width:760px">
+      <details><summary>Como adquiro uma peça?</summary><p>As coleções são divulgadas no Instagram e as peças podem ser adquiridas no ateliê, após contato com a criadora pelo Direct.</p></details>
+      <details><summary>Quais tamanhos existem?</summary><p>P, M, G e GG.</p></details>
+      <details><summary>A marca faz peças sob encomenda?</summary><p>Não. As coleções são pensadas e lançadas com divulgação no Instagram, em quantidade limitada.</p></details>
+      <details><summary>Posso pedir uma peça que esgotou?</summary><p>A marca aceita sugestões para relançar peças muito pedidas. Envie a sua pelo Direct.</p></details>
+      <details><summary>Haverá tamanhos plus size?</summary><p>Está nos planos futuros da marca.</p></details>
+      <details><summary>Onde fica o ateliê?</summary><p>Em Valinhos (SP). Os detalhes são combinados pelo Direct.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- 8. SEGURANÇA -->
+<section class="seg" id="seguranca">
+  <div class="wrap">
+    <p class="eyebrow">Compre com segurança</p>
+    <h2>Sua proteção vem primeiro.</h2>
+    <hr class="rule">
+    <p class="lead">Para a sua proteção, a marca só atende pelo perfil oficial <a href="https://www.instagram.com/ajaquelinegimenes" target="_blank" rel="noopener noreferrer">@ajaquelinegimenes</a> no Instagram.</p>
+    <div class="grid3" style="margin-top:30px">
+      <div class="card"><h3>Canal oficial</h3><p>Atendimento somente pelo perfil @ajaquelinegimenes. Em caso de dúvida, confirme por ele.</p></div>
+      <div class="card"><h3>Cuidado com perfis falsos e links suspeitos</h3><p>Desconfie de perfis parecidos com o nome da marca, de mensagens que peçam códigos recebidos por SMS ou aplicativo e de links que não estejam nesta página.</p></div>
+      <div class="card"><h3>Confira antes de pagar</h3><p>Antes de pagar, confira o nome de quem vai receber. Pedimos apenas o necessário para combinar a sua peça.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 9. CONTATO -->
+<section id="contato">
+  <div class="wrap">
+    <p class="eyebrow">Contato e redes</p>
+    <h2>Vamos conversar?</h2>
+    <hr class="rule">
+    <p class="lead">Instagram: <a href="https://www.instagram.com/ajaquelinegimenes" target="_blank" rel="noopener noreferrer">@ajaquelinegimenes</a><br>Cidade: Valinhos, SP</p>
+    <div class="acoes"><a class="btn" href="https://www.instagram.com/ajaquelinegimenes" target="_blank" rel="noopener noreferrer">Seguir no Instagram</a></div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <p><strong>Privacidade.</strong> Esta página não coleta dados. Ao falar com a marca por mensagem, usamos nome, telefone e informações de retirada apenas para combinar a sua peça. Os dados ficam guardados enquanto forem necessários para isso e podem ser apagados a seu pedido, bastando solicitar pelo Direct do Instagram @ajaquelinegimenes.</p>
+    <p class="nota">© 2026 Jaqueline Gimenes. Página desenvolvida como atividade de extensão universitária do curso de Ciência da Computação da UNIP.</p>
+  </div>
+</footer>
+</body>
+</html>
